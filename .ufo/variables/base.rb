@@ -8,4 +8,4 @@
 @memory = 512
 @memory_reservation = 512
 
-@execution_role_arn = "arn:aws:iam::111111111111:role/ecsTaskExecutionRole"
+@execution_role_arn = "arn:aws:iam::160619113767:role/ecsTaskExecutionRole"

@@ -43,7 +43,7 @@ listener:
                   # so we can keep this commented out, unless we need HTTPS at elb level
   # certificates is required if using HTTPS protocol with application
   # certificates:
-  # - certificate: arn:aws:acm:us-east-1:111111111111:certificate/11111111-2222-3333-4444-555555555555
+  # - certificate: arn:aws:acm:us-east-1:160619113767:certificate/11111111-2222-3333-4444-555555555555
 
 # Configure dns to automatically be associated with the ELB dns name.
 # Note, the route53 record set for the domain name must already exist.

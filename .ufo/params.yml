@@ -6,10 +6,21 @@
 # More docs: http://ufoships.com/docs/params/
 
 # ufo task calls run_tasks
-run_task:
-  # network_configuration is required for FARGATE
-  network_configuration:
-    awsvpc_configuration:
-      subnets: <%= network[:ecs_subnets].inspect %> # required
-      security_groups: <%= network[:ecs_security_groups].inspect %>
-      assign_public_ip: "ENABLED" # accepts ENABLED, DISABLED
+#
+# Internally, ufo will adjust the run_task parameters based no the
+# task definition being deployed.
+# If it is a Fargate task definition, network_configurations will automatically
+# be added.
+# If it is a EC2 task definition, network_configurations are not added.
+#
+# Adjust this if you would like to override the default parameters passed to
+# run_task by ufo.
+#
+# run_task:
+#   launch_type: FARGATE # required if using fargate
+#   # network_configuration is required for FARGATE
+#   network_configuration:
+#     awsvpc_configuration:
+#       subnets: <%= network[:ecs_subnets].inspect %> # required
+#       security_groups: <%= network[:ecs_security_groups].inspect %>
+#       assign_public_ip: "ENABLED" # accepts ENABLED, DISABLED
