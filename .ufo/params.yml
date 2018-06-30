@@ -6,9 +6,9 @@
 # More docs: http://ufoships.com/docs/params/
 
 run_task:
-  network_configuration:
-    awsvpc_configuration:
-      subnets: <%= network[:ecs_subnets].inspect %> # required
-      security_groups: <%= network[:ecs_security_groups].inspect %>
-      # for fargate use: assign_public_ip: "ENABLED"
-      # assign_public_ip: "ENABLED" # accepts ENABLED, DISABLED
+  # network_configuration:
+  #   awsvpc_configuration:
+  #     subnets: <%= network[:ecs_subnets].inspect %> # required
+  #     security_groups: <%= network[:ecs_security_groups].inspect %>
+  #     # for fargate use: assign_public_ip: "ENABLED"
+  #     # assign_public_ip: "DISABLED" # accepts ENABLED, DISABLED

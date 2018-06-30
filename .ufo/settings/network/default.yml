@@ -1,19 +1,11 @@
 ---
-vpc: vpc-d79753ae
+vpc: vpc-50ff162a
 ecs_subnets: # required: at least 2 subnets
-  - subnet-29e75925
-  - subnet-3fb1875a
-  - subnet-4ac50f66
-  - subnet-622eee38
-  - subnet-83cf49cb
-  - subnet-f45d02c8
-elb_subnets: # defaults to same subnets as ecs_subnets
-  - subnet-29e75925
-  - subnet-3fb1875a
-  - subnet-4ac50f66
-  - subnet-622eee38
-  - subnet-83cf49cb
-  - subnet-f45d02c8
+  - subnet-5e47b260
+  - subnet-771cbb2b
+elb_subnets: # defaults to same subnets as ecs_subnets when not set
+  - subnet-5e47b260
+  - subnet-771cbb2b
 
 # Optional additional existing security group ids to add on top of the ones created
 # by ufo.
