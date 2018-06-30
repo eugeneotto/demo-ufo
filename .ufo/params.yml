@@ -1,0 +1,15 @@
+# These params are passsed to the corresponding aws-sdk ecs client methods.
+# AWS Docs example: https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/ECS/Client.html#run_task-instance_method
+#
+# The network helper provides access to the .ufo/settings/network/[PROFILE].yml
+#
+# More docs: http://ufoships.com/docs/params/
+
+# ufo task calls run_tasks
+run_task:
+  # network_configuration is required for FARGATE
+  network_configuration:
+    awsvpc_configuration:
+      subnets: <%= network[:ecs_subnets].inspect %> # required
+      security_groups: <%= network[:ecs_security_groups].inspect %>
+      assign_public_ip: "ENABLED" # accepts ENABLED, DISABLED
