@@ -10,6 +10,7 @@ phases:
       - ls /etc/*release*
       - cat /etc/*release*
       - whoami
+      - gem install --no-document ufo
   build:
     commands:
       - echo Build started on `date`
