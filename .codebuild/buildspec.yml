@@ -17,13 +17,8 @@ phases:
       - echo Build started on `date`
       - echo Building project...
       - uptime
-      - ufo docker build
-      - ufo tasks build
-      - grep region .ufo/output/demo-web.json
-
-      # - ufo current --service demo-web
-      # - ufo ship
-      # - .codebuild/acceptance.sh
+      - ufo current --service demo-web
+      - ufo ship
 cache:
   paths:
     - /usr/local/bundle
