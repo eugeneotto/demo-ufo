@@ -11,11 +11,13 @@ phases:
       - cat /etc/*release*
       - whoami
       - gem install --no-document ufo
+      # - configure ~/.aws/config default
   build:
     commands:
       - echo Build started on `date`
       - echo Building project...
       - uptime
+      - ufo docker build
       - ufo tasks build
       - grep region .ufo/output/demo-web.json
 
