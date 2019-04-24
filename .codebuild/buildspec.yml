@@ -6,7 +6,7 @@ phases:
       - uname -a
       - pwd
       - ls
-      - env
+      - env | sort
       - ls /etc/*release*
       - cat /etc/*release*
       - whoami
