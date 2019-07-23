@@ -6,22 +6,21 @@ version: 0.2
 phases:
   install:
     commands:
-      - uname -a
-      - pwd
-      - ls
-      - env | sort
-      - ls /etc/*release*
-      - cat /etc/*release*
-      - whoami
-      - gem install --no-document ufo
+      # - uname -a
+      # - pwd
+      # - ls
+      # - env | sort
+      # - ls /etc/*release*
+      # - cat /etc/*release*
+      # - whoami
+      # - gem install --no-document ufo
       # - configure ~/.aws/config default
   build:
     commands:
       - echo Build started on `date`
-      - echo Building project...
       - uptime
-      - ufo current --service demo-web
-      - ufo ship
+      # - ufo current --service demo-web
+      # - ufo ship
 cache:
   paths:
     - /usr/local/bundle
