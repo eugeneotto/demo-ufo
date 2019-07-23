@@ -1,7 +1,10 @@
 version: 0.2
 
+# Example starter file
+# Edit to fit your needs
+
 phases:
-  pre_build:
+  install:
     commands:
       - uname -a
       - pwd
