@@ -2,12 +2,10 @@
 
 set -x
 
-# bolt-jets
-aws sns publish --topic-arn "arn:aws:sns:us-west-2:160619113767:test-topic" --message '{"default": "test message"}'
-
+echo start2
 
 for i in {1..100}; do
-  echo hello
+  echo hello2
   date
   sleep 10
 done
