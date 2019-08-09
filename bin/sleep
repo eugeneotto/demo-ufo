@@ -2,10 +2,10 @@
 
 set -x
 
-echo start2
+echo start4
 
 for i in {1..100}; do
-  echo hello2
+  echo "hello4 i: $i pid: $$"
   date
   sleep 10
 done
