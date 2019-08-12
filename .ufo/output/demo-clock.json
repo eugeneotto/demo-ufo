@@ -1,0 +1,36 @@
+{
+  "family": "demo-clock",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::595500125192:role/ecsTaskExecutionRole",
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "clock",
+      "image": "595500125192.dkr.ecr.us-west-1.amazonaws.com/demo/sinatra:ufo-2019-08-11T23-29-58-adda925",
+      "command": null,
+      "environment": [
+        {
+          "name": "RAILS_ENV",
+          "value": "development"
+        },
+        {
+          "name": "SECRET_KEY_BASE",
+          "value": "secret"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "ecs/demo-clock",
+          "awslogs-region": "us-west-1",
+          "awslogs-stream-prefix": "demo"
+        }
+      },
+      "essential": true
+    }
+  ]
+}

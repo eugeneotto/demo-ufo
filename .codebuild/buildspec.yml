@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - gem install --no-document ufo
+  build:
+    commands:
+      - echo Deploying project to ECS started on `date`
+      - UFO_ENV=$UFO_ENV ufo ship $UFO_APP

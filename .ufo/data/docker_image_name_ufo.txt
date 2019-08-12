@@ -1,0 +1,1 @@
+595500125192.dkr.ecr.us-west-1.amazonaws.com/demo/sinatra:ufo-2019-08-11T23-29-58-adda925
